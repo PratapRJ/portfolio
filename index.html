@@ -598,16 +598,22 @@
 						
 						<script>
 						    document.getElementById('contact-form').addEventListener('submit', function(event) {
-						        event.preventDefault(); // Prevent the default form submission
+						        event.preventDefault(); // Prevent default form submission
 						
-						        // Submit the form data using Fetch API
+						        let formData = new FormData(this);
+						        let jsonData = {};
+						        formData.forEach((value, key) => {
+						            jsonData[key] = value;
+						        });
+						
 						        fetch(this.action, {
 						            method: 'POST',
-						            body: new FormData(this),
+						            headers: { "Content-Type": "application/json" },
+						            body: JSON.stringify(jsonData)
 						        })
-						        .then(response => {
-						            if (response.ok) {
-						                // Redirect to thank-you.html after successful submission
+						        .then(response => response.json()) // Expect JSON response
+						        .then(data => {
+						            if (data.success) {
 						                window.location.href = 'thank-you.html';
 						            } else {
 						                alert('Failed to send message. Please try again.');
@@ -619,6 +625,7 @@
 						        });
 						    });
 						</script>
+
 						</div>
 					</div>
 				</div>
