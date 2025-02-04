@@ -595,30 +595,6 @@
 							        </div>
 							    </div>
 							</form>
-							
-							<script>
-							    document.getElementById('contact-form').addEventListener('submit', function(event) {
-							        event.preventDefault(); // Prevent the default form submission
-							
-							        // Submit the form data using Fetch API
-							        fetch(this.action, {
-							            method: 'POST',
-							            body: new FormData(this),
-							        })
-							        .then(response => {
-							            if (response.ok) {
-							                // Redirect to thank-you.html after successful submission
-							                window.location.href = 'thank-you.html';
-							            } else {
-							                alert('Failed to send message. Please try again.');
-							            }
-							        })
-							        .catch(error => {
-							            console.error('Error:', error);
-							            alert('Failed to send message. Please try again.');
-							        });
-							    });
-							</script>
 
 						</div>
 					</div>
