@@ -381,7 +381,7 @@ a:hover{
     animation: fadeInDown 1s both 0.2s;
 }
 .navbar-default.dark_bg_menu.menu-shrink{
-	background-color: #000;
+	background-color: #ffb400;
     box-shadow: 0 10px 15px rgba(25,25,25,0.1);
     padding: 10px 0;
     width: 100%;
