@@ -320,7 +320,7 @@ a:hover{
     margin-bottom: 0;
     width: 100%;
     padding: 20px 0;
-    background: #ffb400;
+    background: #fff;
     transition: all 0.4s ease-in-out;
     -webkit-transition: all 0.4s ease-in-out;
 }
@@ -345,7 +345,7 @@ a:hover{
     -webkit-transition: all 0.3s ease-in-out;
 }
 .navbar-default.dark_bg_menu .navbar-nav>li>a{
-	color: #000 !important;
+	color: #ffb400 !important;
 }
 .navbar-default .navbar-nav>li>a:hover,
 .navbar-default .navbar-nav>li>a:focus{
